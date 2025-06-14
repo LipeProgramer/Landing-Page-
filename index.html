@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Barbearia Imperium</title>
     <link rel="icon" href="favicon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
         html {
@@ -15,75 +17,106 @@
 </head>
 
 <body>
-    <header><img src="favicon.png" alt="Logo Barbearia Imperium">
+    <header>
+        <img src="favicon.png" alt="Logo Barbearia Imperium">
         <h1>Barbearia Imperium</h1>
         <p>Estilo não se improvisa, se conquista.</p>
+        <nav>
+            <a href="#servicos">Serviços</a>
+            <a href="#barbeiros">Barbeiros</a>
+            <a href="#agendamento">Agendar</a>
+            <a href="#contato">Contato</a>
+            <a href="#avaliacao">Avaliação</a>
+        </nav>
     </header>
-    <nav><a href="#servicos">Serviços</a><a href="#barbeiros">Barbeiros</a><a href="#agendamento">Agendar</a><a href="#contato">Contato</a><a href="#avaliacao">Avaliação</a></nav>
     <main>
+        <section id="hero">
+            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=900&q=80"
+                alt="Barbearia" class="hero-img">
+            <div class="hero-text">
+                <h2>Bem-vindo à Barbearia Imperium</h2>
+                <p>Tradição, estilo e atendimento premium para você se sentir único.</p>
+                <a href="#agendamento" class="button">Agende seu horário</a>
+            </div>
+        </section>
         <section id="servicos">
             <h2>Serviços</h2>
-            <div class="service-category">
-                <h3>Corte e Estilo</h3>
-                <ul>
-                    <li>Corte masculino tradicional</li>
-                    <li>Corte degradê (fade)</li>
-                    <li>Corte infantil</li>
-                    <li>Corte na tesoura</li>
-                    <li>Corte máquina</li>
-                    <li>Ajuste de costeletas e nuca</li>
-                </ul>
-            </div>
-            <div class="service-category">
-                <h3>Barba e Cuidados Faciais</h3>
-                <ul>
-                    <li>Barba completa com toalha quente</li>
-                    <li>Design de barba</li>
-                    <li>Navalha+massagem relaxante</li>
-                    <li>Pigmentação de barba</li>
-                    <li>Hidratação de barba</li>
-                </ul>
-            </div>
-            <div class="service-category">
-                <h3>Tratamentos Capilares</h3>
-                <ul>
-                    <li>Hidratação capilar</li>
-                    <li>Selagem térmica</li>
-                    <li>Progressiva masculina</li>
-                    <li>Tonalização de cabelo grisalho</li>
-                    <li>Detox capilar</li>
-                </ul>
-            </div>
-            <div class="service-category">
-                <h3>Serviços Premium</h3>
-                <ul>
-                    <li>Pacote VIP (corte + barba + hidratação + massagem)</li>
-                    <li>Atendimento com horário marcado e sem espera</li>
-                    <li>Espaço com bebida e ambiente lounge</li>
-                </ul>
+            <div class="servicos-grid">
+                <div class="service-card">
+                    <h3>Corte & Estilo</h3>
+                    <ul>
+                        <li>Corte masculino tradicional</li>
+                        <li>Corte degradê (fade)</li>
+                        <li>Corte infantil</li>
+                        <li>Corte na tesoura</li>
+                        <li>Corte máquina</li>
+                        <li>Ajuste de costeletas e nuca</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h3>Barba & Cuidados</h3>
+                    <ul>
+                        <li>Barba completa com toalha quente</li>
+                        <li>Design de barba</li>
+                        <li>Navalha + massagem relaxante</li>
+                        <li>Pigmentação de barba</li>
+                        <li>Hidratação de barba</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h3>Tratamentos Capilares</h3>
+                    <ul>
+                        <li>Hidratação capilar</li>
+                        <li>Selagem térmica</li>
+                        <li>Progressiva masculina</li>
+                        <li>Tonalização de cabelo grisalho</li>
+                        <li>Detox capilar</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h3>Premium</h3>
+                    <ul>
+                        <li>Pacote VIP (corte + barba + hidratação + massagem)</li>
+                        <li>Atendimento com horário marcado</li>
+                        <li>Espaço com bebida e ambiente lounge</li>
+                    </ul>
+                </div>
             </div>
         </section>
         <section id="barbeiros">
-            <h2>Barbeiros</h2>
-            <div class="barber-card"><img src="Victor.jpg" alt="Barbeiro 1">
-                <div><span class="barber-name">Barbeiro Victor</span>
-                    <p>Especialista em cortes degradê e barba clássica.</p>
+            <h2>Nossos Barbeiros</h2>
+            <div class="barbeiros-grid">
+                <div class="barber-card">
+                    <img src="Victor.jpg" alt="Barbeiro Victor">
+                    <div>
+                        <span class="barber-name">Victor</span>
+                        <p>Especialista em cortes degradê e barba clássica.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="barber-card"><img src="Carlos.jpg" alt="Barbeiro 2">
-                <div><span class="barber-name">Barbeiro Carlos</span>
-                    <p>Focado em cortes infantis e estilo moderno.</p>
+                <div class="barber-card">
+                    <img src="Carlos.jpg" alt="Barbeiro Carlos">
+                    <div>
+                        <span class="barber-name">Carlos</span>
+                        <p>Focado em cortes infantis e estilo moderno.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="barber-card"><img src="Pedro.jpg" alt="Barbeiro 3">
-                <div><span class="barber-name">Barbeiro Pedro</span>
-                    <p>Atendimento VIP e tratamentos capilares.</p>
+                <div class="barber-card">
+                    <img src="Pedro.jpg" alt="Barbeiro Pedro">
+                    <div>
+                        <span class="barber-name">Pedro</span>
+                        <p>Atendimento VIP e tratamentos capilares.</p>
+                    </div>
                 </div>
             </div>
         </section>
         <section id="agendamento">
-            <h2>Agendamento</h2>
-            <form id="form-agendamento"><label for="nome">Nome Completo</label><input type="text" id="nome" name="nome" required><label for="whatsapp">WhatsApp</label><input type="tel" id="whatsapp" name="whatsapp" placeholder="(xx) xxxxx-xxxx" required><label for="servico">Serviço</label>
+            <h2>Agende seu horário</h2>
+            <form id="form-agendamento" autocomplete="off">
+                <label for="nome">Nome Completo</label>
+                <input type="text" id="nome" name="nome" required>
+                <label for="whatsapp">WhatsApp</label>
+                <input type="tel" id="whatsapp" name="whatsapp" placeholder="(xx) xxxxx-xxxx" required>
+                <label for="servico">Serviço</label>
                 <select id="servico" name="servico" required>
                     <option value="">-- Selecione --</option>
                     <optgroup label="Corte e Estilo">
@@ -113,39 +146,55 @@
                         <option>Atendimento com horário marcado</option>
                         <option>Espaço com bebida e ambiente lounge</option>
                     </optgroup>
-                    </select><label for="barbeiro">Barbeiro</label><select id="barbeiro" name="barbeiro" required><option value="">-- Selecione --</option><option>Victor</option><option>Carlos</option><option>Pedro</option></select>
+                </select>
+                <label for="barbeiro">Barbeiro</label>
+                <select id="barbeiro" name="barbeiro" required>
+                    <option value="">-- Selecione --</option>
+                    <option>Victor</option>
+                    <option>Carlos</option>
+                    <option>Pedro</option>
+                </select>
                 <label for="data">Data e Hora</label>
-                <input type="datetime-local" id="data" name="data" required step="1800" /><button type="submit">Agendar</button></form>
-            <p id="msg-confirmacao" style="color:var(--accent); font-weight:bold; margin-top: 15px;"></p>
+                <input type="datetime-local" id="data" name="data" required step="1800" />
+                <button type="submit">Agendar</button>
+            </form>
+            <p id="msg-confirmacao"></p>
         </section>
         <section id="contato">
             <h2>Contato</h2>
-            <p><strong>Endereço:</strong>Av. Horácio Rhacanello Filho 5620 (Novo Centro Próximo Ao Terminal Rodoviário), Maringá, PR, 87013-000
-            </p>
-            <p><strong>Telefone:</strong>(44) 3025-7890</p>
-            <p><strong>E-mail:</strong>contato@barbeariaimperium.com.br</p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.227182752734!2d-51.93658308445009!3d-23.419288868553785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ecdbbb6e6eb0bf%3A0x937a2ff20a8cc1c4!2sAv.%20Hor%C3%A1cio%20Rhacanello%20Filho%2C%205620%20-%20Novo%20Centro%2C%20Maring%C3%A1%20-%20PR%2C%2087013-000!5e0!3m2!1spt-BR!2sbr!4v1684661632147!5m2!1spt-BR!2sbr"
-                allowfullscreen="" loading="lazy"></iframe></section>
+            <div class="contato-info">
+                <p><strong>Endereço:</strong> Av. Horácio Rhacanello Filho 5620 (Novo Centro Próximo Ao Terminal Rodoviário),
+                    Maringá, PR, 87013-000
+                </p>
+                <p><strong>Telefone:</strong> (44) 3025-7890</p>
+                <p><strong>E-mail:</strong> contato@barbeariaimperium.com.br</p>
+            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.227182752734!2d-51.93658308445009!3d-23.419288868553785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ecdbbb6e6eb0bf%3A0x937a2ff20a8cc1c4!2sAv.%20Hor%C3%A1cio%20Rhacanello%20Filho%2C%205620%20-%20Novo%20Centro%2C%20Maring%C3%A1%20-%20PR%2C%2087013-000!5e0!3m2!1spt-BR!2sbr!4v1684661632147!5m2!1spt-BR!2sbr"
+                allowfullscreen="" loading="lazy"></iframe>
+        </section>
         <section id="avaliacao">
             <h2>Avalie Nosso Serviço</h2>
             <form id="form-avaliacao">
                 <div class="nota-row">
                     <label style="margin-right:8px;">Nota:</label>
                     <div class="rating">
-                        <input type="radio" id="star1" name="nota" value="1"><label for="star1">&#9733;</label>
-                        <input type="radio" id="star2" name="nota" value="2"><label for="star2">&#9733;</label>
-                        <input type="radio" id="star3" name="nota" value="3"><label for="star3">&#9733;</label>
-                        <input type="radio" id="star4" name="nota" value="4"><label for="star4">&#9733;</label>
                         <input type="radio" id="star5" name="nota" value="5"><label for="star5">&#9733;</label>
+                        <input type="radio" id="star4" name="nota" value="4"><label for="star4">&#9733;</label>
+                        <input type="radio" id="star3" name="nota" value="3"><label for="star3">&#9733;</label>
+                        <input type="radio" id="star2" name="nota" value="2"><label for="star2">&#9733;</label>
+                        <input type="radio" id="star1" name="nota" value="1"><label for="star1">&#9733;</label>
                     </div>
                 </div>
                 <label for="comentario">Comentário:</label>
                 <textarea id="comentario" name="comentario" rows="4" placeholder="Escreva sua opinião..."></textarea>
                 <button type="submit">Enviar Avaliação</button>
             </form>
-            <p id="msg-avaliacao" style="color:var(--accent); font-weight:bold; margin-top: 15px;"></p>
+            <p id="msg-avaliacao"></p>
         </section>
     </main>
-    <footer>&copy; 2025 Barbearia Imperium - Todos os direitos reservados. </footer>
+    <footer>
+        &copy; 2025 Barbearia Imperium - Todos os direitos reservados.
+    </footer>
     <button id="btn-topo" title="Voltar ao topo">&#8679;</button>
     <script src="script.js"></script>
 </body>
