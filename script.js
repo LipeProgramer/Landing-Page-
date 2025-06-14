@@ -1,39 +1,40 @@
-// Agendamento - simulação simples
+// Confirmação de agendamento
 document.getElementById('form-agendamento').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const nome = document.getElementById('nome').value;
-    const whatsapp = document.getElementById('whatsapp').value;
-    const servico = document.getElementById('servico').value;
-    const barbeiro = document.getElementById('barbeiro').value;
-    const data = document.getElementById('data').value;
-    if (nome && whatsapp && servico && barbeiro && data) {
-        document.getElementById('msg-confirmacao').textContent =
-            `Obrigado, ${nome}! Seu agendamento para ${servico} com ${barbeiro} está confirmado para ${new Date(data).toLocaleString()}.`;
-        this.reset();
-    } else {
-        document.getElementById('msg-confirmacao').textContent = 'Por favor, preencha todos os campos.';
-    }
+  e.preventDefault();
+  const nome = document.getElementById('nome').value;
+  const servico = document.getElementById('servico').value;
+  const data = document.getElementById('data').value;
+  document.getElementById('msg-confirmacao').style.color = '#c9a14a';
+  document.getElementById('msg-confirmacao').textContent =
+    `Obrigado, ${nome}! Seu agendamento para "${servico}" em ${data.replace('T', ' às ')} foi recebido.`;
+  this.reset();
+  setTimeout(() => { document.getElementById('msg-confirmacao').textContent = ''; }, 7000);
 });
 
-
+// Avaliação com estrelas
 document.getElementById('form-avaliacao').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const nota = document.querySelector('input[name="nota"]:checked');
-    const comentario = document.getElementById('comentario').value;
-    if (nota) {
-        document.getElementById('msg-avaliacao').textContent = 'Obrigado pela sua avaliação!';
-        this.reset();
-    } else {
-        document.getElementById('msg-avaliacao').textContent = 'Por favor, selecione uma nota.';
-    }
+  e.preventDefault();
+  const nota = document.querySelector('input[name="nota"]:checked');
+  const comentario = document.getElementById('comentario').value;
+  if (!nota) {
+    document.getElementById('msg-avaliacao').style.color = 'red';
+    document.getElementById('msg-avaliacao').textContent = 'Por favor, selecione uma nota.';
+    return;
+  }
+  document.getElementById('msg-avaliacao').style.color = '#c9a14a';
+  document.getElementById('msg-avaliacao').textContent =
+    `Obrigado pela avaliação (${nota.value} estrelas)!`;
+  this.reset();
+  setTimeout(() => { document.getElementById('msg-avaliacao').textContent = ''; }, 7000);
 });
 
+// Botão voltar ao topo
 const btnTopo = document.getElementById('btn-topo');
 window.onscroll = function() {
-    btnTopo.style.display = (window.scrollY > 200) ? 'block' : 'none';
+  btnTopo.style.display = (window.scrollY > 300) ? 'block' : 'none';
 };
 btnTopo.onclick = function() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 
 
