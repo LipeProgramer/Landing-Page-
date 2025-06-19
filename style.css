@@ -13,7 +13,7 @@ body {
   min-height: 100vh;
 }
 header {
-  background: var(--secondary);
+  background: linear-gradient(0deg,#232323 20%, rgba(201, 201, 201, 1) 100%);
   padding: 32px 0 16px 0;
   text-align: center;
   border-bottom: 3px solid var(--accent);

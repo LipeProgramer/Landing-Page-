@@ -1,34 +1,54 @@
-// Confirmação de agendamento
 document.getElementById('form-agendamento').addEventListener('submit', function(e) {
   e.preventDefault();
   const nome = document.getElementById('nome').value;
   const servico = document.getElementById('servico').value;
+  const barbeiro = document.getElementById('barbeiro').value;
   const data = document.getElementById('data').value;
-  document.getElementById('msg-confirmacao').style.color = '#c9a14a';
-  document.getElementById('msg-confirmacao').textContent =
-    `Obrigado, ${nome}! Seu agendamento para "${servico}" em ${data.replace('T', ' às ')} foi recebido.`;
-  this.reset();
-  setTimeout(() => { document.getElementById('msg-confirmacao').textContent = ''; }, 7000);
+  const whatsapp = document.getElementById('whatsapp').value;
+
+
+  const dataFormatada = new Date(data).toLocaleString('pt-BR', { dateStyle: 'short', timeStyle: 'short' });
+
+
+  const mensagem = 
+    `Olá! Gostaria de agendar um horário na Barbearia Imperium:%0A` +
+    `*Nome:* ${nome}%0A` +
+    `*WhatsApp:* ${whatsapp}%0A` +
+    `*Serviço:* ${servico}%0A` +
+    `*Barbeiro:* ${barbeiro}%0A` +
+    `*Data e Hora:* ${dataFormatada}`;
+
+
+  window.open(`https://wa.me/554430257890?text=${mensagem}`, '_blank');
 });
 
-// Avaliação com estrelas
+
 document.getElementById('form-avaliacao').addEventListener('submit', function(e) {
   e.preventDefault();
   const nota = document.querySelector('input[name="nota"]:checked');
-  const comentario = document.getElementById('comentario').value;
+  const comentario = document.getElementById('comentario').value.trim();
+
   if (!nota) {
     document.getElementById('msg-avaliacao').style.color = 'red';
     document.getElementById('msg-avaliacao').textContent = 'Por favor, selecione uma nota.';
     return;
   }
-  document.getElementById('msg-avaliacao').style.color = '#c9a14a';
-  document.getElementById('msg-avaliacao').textContent =
-    `Obrigado pela avaliação (${nota.value} estrelas)!`;
-  this.reset();
-  setTimeout(() => { document.getElementById('msg-avaliacao').textContent = ''; }, 7000);
+
+  
+  const estrelas = '★'.repeat(Number(nota.value));
+
+  
+  const mensagem = 
+    `Nova avaliação para Barbearia Imperium:%0A` +
+    `*Nota:* ${estrelas}%0A` +
+    `*Comentário:* ${comentario ? comentario : 'Sem comentário.'}`;
+
+
+  
+  window.open(`https://wa.me/554430257890?text=${mensagem}`, '_blank');
 });
 
-// Botão voltar ao topo
+
 const btnTopo = document.getElementById('btn-topo');
 window.onscroll = function() {
   btnTopo.style.display = (window.scrollY > 300) ? 'block' : 'none';
